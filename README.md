@@ -1,6 +1,6 @@
 # AI-Connect-4-Agent 
 
-    This Assignment was made by IS students for the AI assignment, we developed a simple AI agent that plays connect 4 against a web application using Min-Max and Alpha-Beta Pruning Algorithm.
+<h4>This Assignment was made by IS students for the AI assignment, we developed a simple AI agent that plays connect 4 against a web application using Min-Max and Alpha-Beta Pruning Algorithm.</h4>
 
     
 
