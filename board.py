@@ -153,6 +153,51 @@ class Board:
                 score += self.evaluate_window(window, player)
 
         return score
+	def minimax(self, grid, depth, alpha, beta, maximizing_player):
+        valid_moves = self.available_moves(grid)
+        game_end = self._check_if_game_end(grid)
+
+        if depth == 0 or game_end:
+            if game_end:
+                if self.score_position(grid, BLUE) == 0:
+                    return 0, None
+                elif maximizing_player:
+                    return -10000, None
+                else:
+                    return 10000, None
+            else:
+                return self.score_position(grid, BLUE), None
+
+        if maximizing_player:
+            max_eval = float('-inf')
+            best_move = None
+            for move in valid_moves:
+                self.make_move(grid, move, BLUE)
+                eval, _ = self.minimax(grid, depth - 1, alpha, beta, False)
+                self.undo_move(grid, move)
+                if eval > max_eval:
+                    max_eval = eval
+                    best_move = move
+                alpha = max(alpha, eval)
+                if beta <= alpha:
+                    break
+            return best_move
+        else:
+            min_eval = float('inf')
+            best_move = None
+            for move in valid_moves:
+                self.make_move(grid, move, RED)
+                eval, _ = self.minimax(grid, depth - 1, alpha, beta, True)
+                self.undo_move(grid, move)
+                if eval < min_eval:
+                    min_eval = eval
+                    best_move = move
+                beta = min(beta, eval)
+                if beta <= alpha:
+                    break
+            return  best_move
+			
+			
     def select_column(self, column):
         pyautogui.click(
             self._get_grid_cordinates()[column][0] + LEFT,
