@@ -20,7 +20,7 @@
 ## 🔗 Links
 [![Github Project](https://img.shields.io/badge/GitHub-Watch-brightgreen)](https://github.com/KhaledFFahmy/Connect4-AI-agent-)
 
-[![linkedin Post](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/)
+[![linkedin Post](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/posts/abdelrhman-el-shaaer_connect4game-cairouniversity-ai-activity-7065705899465560064-3a3M?utm_source=share&utm_medium=member_desktop)
 
 
 
